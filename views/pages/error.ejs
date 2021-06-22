@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%- include('../template/head')-%>
+        <style>
+            html, body {
+                height: 100%;
+            }
+            body {
+                display: flex;
+                flex-direction: column;
+            }
+            .content-block {
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .headline {
+                font-size: 50px;
+                margin-bottom: 16px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="" style="flex: 1 0 auto;">
+            <%- include('../template/nav')-%>
+            <div class='content-block'>
+                <img src="/images/meditation.png" style="margin-top: 90px;">
+                <h1 class="headline text-center font-weight-bold">Page Not Found</h1>
+            </div>
+        </div>
+        <%- include('../template/footer')-%>
+    </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%- include('../template/head')-%>
+        <style>
+            
+            html, body {
+                height: 100%;
+            }
+            body {
+                display: flex;
+                flex-direction: column;
+            }
+            .hide {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div class="" style="flex: 1 0 auto;">
+        <%- include('../template/nav')-%>
+        
+        <div class="container text-white pb-3 pl-4 pr-4"
+         style="margin-top:90px; max-width: 500px; border-radius: 2rem; background-color: #371d50;">
+         
+         <input id="longUrl" type="text" placeholder="Shorten your link" 
+            class="container-fluid mt-3 border" 
+            style="height: 50px;border-radius: 1rem;" autocomplete="off">
+        <label class="ml-2">URL must contain http:// or https://</label>
+
+         <input id="alias" type="text" placeholder="Enter Custom key (Optional)"
+            class="container-fluid mt-3 border disabled"
+            style="height: 50px;border-radius: 1rem;"
+            autocomplete="off">
+         <label class="ml-2">May Contain (A-Z),(a-z),(1-9),(-),(_)</label>
+
+         <button id="shortenBtn" type="button" class="btn btn-primary container-fluid mt-1" 
+            style="height: 50px;border-radius: 1rem;">Shorten</button>
+         
+         <p id="status" class="ml-2 mt-3 text-danger text-center font-weight-bold"></p>
+         
+         <label id="shortUrlContainer" class="container-fluid mt-3 pb-3 pt-3 border bg-light hide" style="border-radius: 1rem;">
+            
+            <input id="shortUrl" type="text" placeholder="Enter Custom key (Optional)"
+               class="container-fluid mt-3 border border-dark"
+               style="height: 50px;border-radius: 1rem;"
+               value="https://shrts1.herokuapp.com/test"
+               readonly>
+            <button id="copy-btn" type="button" class="btn btn-secondary container-fluid mt-3" 
+               style="height: 50px; width:49%; border-radius: 1rem;"
+               title="Copy to Clipboard">
+               Copy
+            </button>
+            <button id="goToUrlBtn" type="button" class="btn btn-secondary container-fluid mt-3" 
+               style="height: 50px; width:49%; border-radius: 1rem;"
+               title="Copy to Clipboard">
+               Go to Url
+            </button>
+            <img id="qrImage" class="qrImage mx-auto d-block mt-2 hide" src="">
+         </label>
+         
+      </div>
+    
+      </div>
+    
+      <%- include('../template/footer')-%>
+      <script src="/javascripts/home.js" type="text/javascript"></script>
+    </body>
+</html>
